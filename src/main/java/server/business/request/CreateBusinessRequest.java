@@ -16,7 +16,6 @@ public class CreateBusinessRequest {
 
     private String pincode;
 
-    @Pattern(regexp = "^(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]")
     private String website;
 
     private String base64logo;
