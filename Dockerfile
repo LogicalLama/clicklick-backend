@@ -1,5 +1,5 @@
 # Use an official OpenJDK runtime as a parent image for Java 21
-FROM openjdk:21-jdk-alpine
+FROM openjdk:21-jdk
 
 # Define the argument for the JAR file
 ARG JAR_FILE=target/*.jar
