@@ -10,10 +10,14 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class CreateUserRequest {
-    private String internalUserID;
     @NotBlank
     private String name;
+
+    @NotBlank
     private String email;
+
     private String phoneNumber;
-    private String orgID;
+
+    @NotBlank
+    private String password;
 }

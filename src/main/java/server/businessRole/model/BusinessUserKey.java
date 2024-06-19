@@ -17,8 +17,8 @@ import java.io.Serializable;
 public class BusinessUserKey implements Serializable {
 
     @Column(name = "business_id")
-    private Long businessId;
+    private String businessId;
 
     @Column(name = "user_id")
-    private Long userId;
+    private String userId;
 }

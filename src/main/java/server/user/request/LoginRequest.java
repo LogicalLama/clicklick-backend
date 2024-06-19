@@ -1,5 +1,6 @@
 package server.user.request;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
@@ -8,8 +9,11 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class DeleteUserRequest {
+public class LoginRequest {
+    @Email
     @NotBlank
-    private String id;
+    private String email;
+
+    @NotBlank
+    private String password;
 }

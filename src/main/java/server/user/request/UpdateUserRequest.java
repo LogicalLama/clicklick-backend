@@ -11,8 +11,13 @@ import lombok.*;
 @Builder
 public class UpdateUserRequest {
     @NotBlank
-    private String internalUserID;
+    private String id;
+
     private String name;
+
     private String email;
+
     private String phoneNumber;
+
+    private String password;
 }

@@ -15,7 +15,7 @@ import java.util.Set;
 @Builder
 @ToString
 @Entity
-public class User extends AuditModel {
+public class UserDetails extends AuditModel {
     @Id
     @Column(name = "id")
     private String id;
@@ -34,6 +34,15 @@ public class User extends AuditModel {
 
     private String password;
 
-    @OneToMany(mappedBy = "user")
-    Set<BusinessUser> roles;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<BusinessUser> roles;
+
+    public UserDetails(String id, String name, String email, String phoneNumber, UserStatus status, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.status = status;
+        this.password = password;
+    }
 }

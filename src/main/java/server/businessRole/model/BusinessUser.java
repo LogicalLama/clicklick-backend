@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import server.business.model.Business;
-import server.user.model.User;
+import server.user.model.UserDetails;
 
 @Getter
 @Setter
@@ -26,11 +26,13 @@ public class BusinessUser {
     @ManyToOne
     @MapsId("userId")
     @JoinColumn(name = "user_id")
-    private User user;
+    private UserDetails user;
 
     @NotBlank
+    @Enumerated(EnumType.STRING)
     private BusinessRole role;
 
     @NotBlank
+    @Enumerated(EnumType.STRING)
     private BusinessUserStatus status;
 }

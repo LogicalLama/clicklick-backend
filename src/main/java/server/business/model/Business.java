@@ -33,8 +33,8 @@ public class Business extends AuditModel {
     @Column(length = 500000)
     private String base64logo;
 
-    @OneToMany(mappedBy = "business")
-    Set<BusinessUser> roles;
+    @OneToMany(mappedBy = "business", cascade = CascadeType.ALL)
+    private Set<BusinessUser> roles;
 
     public Business(String businessID, String businessName, BusinessStatus status) {
         this.id = businessID;

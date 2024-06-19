@@ -1,12 +1,12 @@
 package server.user.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import server.user.model.User;
+import server.user.model.UserDetails;
 
 import java.util.Optional;
 
-public interface UserRepository extends JpaRepository<User, String> {
-    Optional<User> findByEmail(String email);
+public interface UserRepository extends JpaRepository<UserDetails, String> {
+    Optional<UserDetails> findByEmail(String email);
 
 //    @Query("SELECT ou from  OrganizationUser ou where ou.email=?1")
 //    List<User> getUserByEmail(String email);
