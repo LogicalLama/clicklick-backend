@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import server.authentication.JwtService;
 import server.user.request.CreateUserRequest;
 import server.user.request.LoginRequest;
+import server.user.request.UpdateUserRequest;
 import server.user.response.LoginResponse;
 import server.user.service.UserService;
 
@@ -38,8 +39,12 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody CreateUserRequest request) {
-        userService.createUser(request);
-        return ResponseEntity.ok("User registered successfully");
+        return ResponseEntity.ok(userService.createUser(request));
+    }
+
+    @PostMapping("/update")
+    public ResponseEntity<?> registerUser(@RequestBody UpdateUserRequest request) {
+        return ResponseEntity.ok(userService.updateUser(request));
     }
 
     @PostMapping("/login")
