@@ -23,6 +23,11 @@ public class BusinessService {
     @Autowired
     private BusinessRepository businessRepository;
 
+    public Business getBusinessDetails(String id) {
+        return businessRepository.findById(id)
+                .orElseThrow(()-> new RuntimeException("invalid id"));
+    }
+
     public Business setup(CreateBusinessRequest setupRequest) {
         return createOrganization(setupRequest);
     }
@@ -69,9 +74,5 @@ public class BusinessService {
 //    }
 //
 //
-//    public Organization getOrganizationDetails(String organizationID) {
-//        return organizationRepository.findById(organizationID)
-//                .orElseThrow(()-> new RuntimeException(" invalid org id"));
-//    }
 
 }
