@@ -28,6 +28,7 @@ public class GameResponse {
         @AllArgsConstructor
         @Builder
         public static class Quadrant {
+            private int index;
             private String displayMessage;
             private String color;
         }

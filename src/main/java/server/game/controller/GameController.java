@@ -26,26 +26,31 @@ public class GameController {
         }
 
         GameResponse.RewardConfig.Quadrant quadrant1 = GameResponse.RewardConfig.Quadrant.builder()
+                .index(1)
                 .displayMessage("Win a Car")
                 .color("#F5F5DC")
                 .build();
 
         GameResponse.RewardConfig.Quadrant quadrant2 = GameResponse.RewardConfig.Quadrant.builder()
+                .index(2)
                 .displayMessage("Win a Bike")
                 .color("#E1C16E")
                 .build();
 
         GameResponse.RewardConfig.Quadrant quadrant3 = GameResponse.RewardConfig.Quadrant.builder()
+                .index(3)
                 .displayMessage("Win a Trip")
                 .color("#FFEA00")
                 .build();
 
         GameResponse.RewardConfig.Quadrant quadrant4 = GameResponse.RewardConfig.Quadrant.builder()
+                .index(4)
                 .displayMessage("Win a 100 Dollars")
                 .color("#FDDA0D")
                 .build();
 
         GameResponse.RewardConfig.Quadrant quadrant5 = GameResponse.RewardConfig.Quadrant.builder()
+                .index(5)
                 .displayMessage("Win a 1000 Dollars")
                 .color("#FFFF8F")
                 .build();
@@ -75,6 +80,7 @@ public class GameController {
         // For this example, we will return a dummy response
 
         GamePlayResponse.Reward reward = GamePlayResponse.Reward.builder()
+                .index(4)
                 .type("Cash")
                 .value("100 USD")
                 .build();

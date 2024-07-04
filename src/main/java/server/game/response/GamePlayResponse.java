@@ -18,6 +18,7 @@ public class GamePlayResponse {
     @AllArgsConstructor
     @Builder
     public static class Reward {
+        private int index;
         private String type;
         private String value;
     }
