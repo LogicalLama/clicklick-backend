@@ -44,7 +44,7 @@ public class FormController {
         Property mobileProperty = Property.builder()
                 .type("string")
                 .description("user’s phone number")
-                .pattern("^[+]{1}(?:[0-9\\-\\(\\)\\/\\.]\\s?){6, 15}[0-9]{1}$")
+                .pattern("^[+]{1}(?:[0-9\\-\\(\\)\\/\\.]\\s?){6,15}[0-9]{1}$")
                 .patternError("Enter mobile number with country code, like +918282828888.")
                 .isRequired(true)
                 .build();
