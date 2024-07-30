@@ -5,22 +5,20 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.*;
 
-import java.util.UUID;
-
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Form {
+public class FormEntry {
 
     @Id
     private String id;
 
     @Column(nullable = false)
-    private String name;
+    private String formId;
 
-    @Column(nullable = false)
-    private String gameId; // Added gameId field
+    @Column(length = 50000)
+    private String entry;
 }

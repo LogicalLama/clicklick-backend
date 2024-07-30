@@ -14,13 +14,13 @@ import java.util.List;
 public class GameResponse {
     private String type;
     private String gameName;
-    private RewardConfig rewardConfig;
+    private RewardConfigResponse rewardConfig;
 
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
     @Builder
-    public static class RewardConfig {
+    public static class RewardConfigResponse {
         private List<Quadrant> quadrants;
 
         @Data
